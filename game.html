@@ -2,17 +2,16 @@
 
 
 	/*Guessing Game:
-	- Start game by loading
-	- User will be prompted for a guess
-	- User enter their guess
-	- Program will evaluate answer + notify user
+		- Start game by loading
+		- User will be prompted for a guess
+		- User enter their guess
+		- Program will evaluate answer + notify user
 	*/
 	
 	var question,
 		guess, 
 		answer;
 
-	
 	question = Math.floor(Math.random() * 4);
 
 	switch (question){
@@ -43,6 +42,7 @@
 	} else {
 		msg = "Sorry, you did not guess it. Why not refresh the page and try again?!";
 	}
+	
 	alert(msg);
 		
 
