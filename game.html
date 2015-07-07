@@ -1,0 +1,58 @@
+<script type="text/javascript">
+
+
+	/*Guessing Game:
+	- Start game by loading
+	- User will be prompted for a guess
+	- User enter their guess
+	- Program will evaluate answer + notify user
+	*/
+	
+	var question,
+		guess, 
+		answer, 
+		numTries; 
+
+		numTries = 0;
+
+	do{
+	
+		question = Math.floor(Math.random() * 4);
+	
+		switch (question){
+			case 0: 
+				guess = prompt("I'm thinking of a number between 1 and 20, can you guess it?");
+				break;
+			case 1: 
+				guess = prompt("I have played volleyball for a few hours today, can you guess how many?");
+				break;
+			case 2: 
+				guess = prompt("I ate some skittles today, can you guess how many?");
+				break;
+			case 3: 
+				guess = prompt("Yesterday I biked a few miles, can you guess how many?");
+				break;
+			case 4: 
+				guess = prompt("I have visited a handful of countries, can you guess how many?");
+				break;
+		}
+	
+		console.log("You guessed " + guess);
+	
+		answer = Math.floor(Math.random() * 19) + 1;
+		console.log("The answer is " + answer);
+	
+		/*if(guess == answer){
+			msg = "That was incredible, you guessed it!! Why not refresh the page and guess again?!";
+		} else {
+			msg = "Sorry, you did not guess it. Why not refresh the page and try again?!";
+		}
+		alert(msg);
+		*/
+		numTries++;
+		console.log("Sorry, you did not guess it. Try again!");
+	}while(guess!=answer || numTries = 4)
+
+	console.log("That was incredible, you guessed it!!")
+
+</script>
