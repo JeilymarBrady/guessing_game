@@ -5,3 +5,9 @@ We added
 - The users guess and the correct answer into the alert message after each question.
 - Ensured clean coding style
 Updates by James Bennett & Jeilymar Brady 070715
+
+
+UPDATE!!!
+7/8/15
+We updated the game to live inside an object creator.  The play of the game has
+remained the same.
