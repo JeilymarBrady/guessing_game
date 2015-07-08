@@ -1,53 +1,52 @@
 <script type="text/javascript">
 
-	/*Guessing Game:
-		- Start game by loading
-		- User will be prompted for a guess
-		- User enter their guess
-		- Program will evaluate answer + notify user
-	*/
 
-	var question,
-			guess,
-			answer;
+var Game = function() {
+  this.alert = alert("You will be asked 5 questions, try and guess the right answer!");
+	this.tries = 0;
+	this.question = "";
+	this.guess = "";
+	this.msg = "";
+	this.play = function() {
+		do{
+			  this.question = Math.floor(Math.random() * 5);
+				switch   (this.question){
+					case 0:
+					  this.guess = prompt("I'm thinking of a number between 1 and 20, can you guess it?");
+						break;
+					case 1:
+					  this.guess = prompt("I have played volleyball for a few hours today, can you guess how many?");
+						break;
+					case 2:
+					  this.guess = prompt("I ate some skittles today, can you guess how many?");
+						break;
+					case 3:
+					  this.guess = prompt("Yesterday I biked a few miles, can you guess how many?");
+						break;
+					case 4:
+					  this.guess = prompt("I have visited a handful of countries, can you guess how many?");
+						break;
+				}
 
-	var tries = 0;
+	this.answer = Math.floor(Math.random() * 20) + 1;
+		console.log("The answer is " +  this.answer);
 
-	alert("You will be asked 5 questions, try and guess the right answer!");
-
-	//This will loop 5 times randmonly choosing which question to ask
-	do{
-		question = Math.floor(Math.random() * 5);
-		switch (question){
-			case 0:
-				guess = prompt("I'm thinking of a number between 1 and 20, can you guess it?");
-				break;
-			case 1:
-				guess = prompt("I have played volleyball for a few hours today, can you guess how many?");
-				break;
-			case 2:
-				guess = prompt("I ate some skittles today, can you guess how many?");
-				break;
-			case 3:
-				guess = prompt("Yesterday I biked a few miles, can you guess how many?");
-				break;
-			case 4:
-				guess = prompt("I have visited a handful of countries, can you guess how many?");
-				break;
-		}
-
-		answer = Math.floor(Math.random() * 20) + 1;
-		console.log("The answer is " + answer);
-
-		if(guess == answer){
-			msg = "That was incredible, you guessed " + guess + " and the answer was " + answer + ".";
+		if  (this.guess ==  this.answer){
+		  this.msg = "That was incredible, you guessed " +  this.guess + " and the answer was " +  this.answer + ".";
 		} else {
-			msg = "Sorry, you did not guess it correctly. Your guess was " + guess + " but the answer was " + answer + ".";
+		  this.msg = "Sorry, you did not guess it correctly. Your guess was " +  this.guess + " but the answer was " +  this.answer + ".";
 		}
 
-		alert(msg);
-		tries++;
-	}while(tries <5);
+		alert(this.msg);
+	  this.tries++;
+	}while(this.tries <5);
+
+}
+}
+
+var game = new Game();
+
+game.play();
 
 	alert("Thanks for playing, I hope that you guessed correctly!");
 
