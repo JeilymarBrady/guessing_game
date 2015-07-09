@@ -11,3 +11,6 @@ UPDATE!!!
 7/8/15
 We updated the game to live inside an object creator.  The play of the game has
 remained the same.
+
+UPDATE!!
+Added more HTML which show up in the web browser :)
