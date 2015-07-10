@@ -19,55 +19,7 @@
     </p>
     <img src="http://images4.fanpop.com/image/photos/19700000/baby-animals-baby-animals-19795706-501-376.jpg" />
 
-		<script type="text/javascript">
-		var Game = function() {
-		  this.alert = alert("You will be asked 5 questions, try and guess the right answer!");
-			this.tries = 0;
-			this.question = "";
-			this.guess = "";
-			this.msg = "";
-			this.play = function() {
-				do{
-					  this.question = Math.floor(Math.random() * 5);
-						switch   (this.question){
-							case 0:
-							  this.guess = prompt("I'm thinking of a number between 1 and 20, can you guess it?");
-								break;
-							case 1:
-							  this.guess = prompt("I have played volleyball for a few hours today, can you guess how many?");
-								break;
-							case 2:
-							  this.guess = prompt("I ate some skittles today, can you guess how many?");
-								break;
-							case 3:
-							  this.guess = prompt("Yesterday I biked a few miles, can you guess how many?");
-								break;
-							case 4:
-							  this.guess = prompt("I have visited a handful of countries, can you guess how many?");
-								break;
-						}
+		<script src="game.js"> </script>
 
-			this.answer = Math.floor(Math.random() * 20) + 1;
-				console.log("The answer is " +  this.answer);
-
-				if  (this.guess ==  this.answer){
-				  this.msg = "That was incredible, you guessed " +  this.guess + " and the answer was " +  this.answer + ".";
-				} else {
-				  this.msg = "Sorry, you did not guess it correctly. Your guess was " +  this.guess + " but the answer was " +  this.answer + ".";
-				}
-
-				alert(this.msg);
-			  this.tries++;
-			}while(this.tries <5);
-
-		}
-		}
-
-		var game = new Game();
-
-		game.play();
-
-			alert("Thanks for playing, I hope that you guessed correctly!");
-		</script>
   </body>
 </html>
