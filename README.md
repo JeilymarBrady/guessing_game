@@ -16,3 +16,4 @@ UPDATE!!
 Added more HTML which show up in the web browser :)
 
 UPDATE!!
+Alert messages now show up in the browswer rather than a pop-up. Added background image. 
